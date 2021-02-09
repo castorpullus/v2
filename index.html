@@ -7,43 +7,19 @@
     <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    
+
 </head>
 
 <body>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    
     <script type="text/javascript" async src="//demosthenes-demo.disqus.com/embed.js"></script>
 
-    <link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.38ea27189bdb723eae3dabf5bc7b8c0b.js">
-    <link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.ec325e7c33ae32f082a2c57fe0c859bd.js">
+    <link rel="prefetch" as="script"
+        href="https://c.disquscdn.com/next/embed/common.bundle.38ea27189bdb723eae3dabf5bc7b8c0b.js">
+    <link rel="prefetch" as="script"
+        href="https://c.disquscdn.com/next/embed/lounge.bundle.ec325e7c33ae32f082a2c57fe0c859bd.js">
     <link rel="prefetch" as="script" href="https://disqus.com/next/config.js">
 
-    
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".swiper-container", {
-          init: false,
-          initialSlide: 0,
-          loop: true
-        });
-        var control = function () {
-          var slide = swiper.slides[swiper.activeIndex];
-          var video = slide.children[0];
-          video.addEventListener("ended", function () {
-            swiper.slideNext(false);
-          });
-          video.play();
-        };
-        swiper.on("init", control);
-        swiper.on("slideChange", control);
-        swiper.init();
-      </script>
-    </script> -->
 
 
     <div class="header">
@@ -199,14 +175,13 @@
 
             </div>
         </div>
-<!-- 
+        <!-- 
         <video controls autoplay loop muted>
             <source src="image/video.mp4" type="video/mp4">
-            IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길 바랍니다.
         </video> -->
 
         <figure id="video_player">
-            <video poster="/image/thumb01.jpg">
+            <video poster="image/thumb01.jpg">
                 <source src="image/video.mp4" type="video/mp4">
                 <source src="image/video.webm" type="video/webm">
             </video>
@@ -256,27 +231,26 @@
 
 
     <script>
-
-var video_player = document.getElementById("video_player"),
-links = video_player.getElementsByTagName('a');
-for (var i=0; i<links.length; i++) {
-	links[i].onclick = handler;
-}
+        var video_player = document.getElementById("video_player"),
+            links = video_player.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].onclick = handler;
+        }
     </script>
     <script>
-       function handler(e) {
-	e.preventDefault();
-	videotarget = this.getAttribute("href");
-	filename = videotarget.substr(0, videotarget.lastIndexOf('.')) || videotarget;
-	video = document.querySelector("#video_player video");
-	video.removeAttribute("controls");
-	video.removeAttribute("poster");
-	source = document.querySelectorAll("#video_player video source");
-	source[0].src = filename + ".mp4";
-	source[1].src = filename + ".webm";
-	video.load();
-	video.play();    
-       }
+        function handler(e) {
+            e.preventDefault();
+            videotarget = this.getAttribute("href");
+            filename = videotarget.substr(0, videotarget.lastIndexOf('.')) || videotarget;
+            video = document.querySelector("#video_player video");
+            video.removeAttribute("controls");
+            video.removeAttribute("poster");
+            source = document.querySelectorAll("#video_player video source");
+            source[0].src = filename + ".mp4";
+            source[1].src = filename + ".webm";
+            video.load();
+            video.play();
+        }
 
     </script>
 </body>
