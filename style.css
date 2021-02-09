@@ -290,7 +290,8 @@
 	opacity: 1;
 }
 
-@media (max-width: 700px) {
+
+@media (max-width: 1200px) {
 	#video_player video,
 		#video_player figcaption {
 			display: table-row;
@@ -299,4 +300,5 @@
 	display: inline-block;
 	width: 33.33%;
 }
+
 }
