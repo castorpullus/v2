@@ -291,7 +291,7 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1800px) {
 	#video_player video,
 		#video_player figcaption {
 			display: table-row;
